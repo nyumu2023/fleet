@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Management System</title>
+    <link rel="stylesheet" type="text/css" href="assets/main.css">
+</head>
+<body>
+  <div class="tab">
+    <button class="tablinks" onclick="JavaScript:selectTab('tab1');">
+       Vehicle Information
+    </button>
+    <button class="tablinks" onclick="JavaScript:selectTab('tab2');">
+       Trip Information
+    </button>
+    <button class="tablinks" onclick="JavaScript:selectTab('tab3');">
+       Serivices Information
+    </button>
+    <button class="tablinks" onclick="JavaScript:selectTab('tab4');">
+   Vehicle Report
+   </button>
+   <button class="tablinks" onclick="JavaScript:selectTab('tab5');">
+    Logout 
+    </button>
+    </div>
+    <div id="tab1" class="tabcontent">
+     <form>
+         <fieldset>
+             <legend>Vehicle Information</legend>
+             <label>Vehicle Type
+             <input type="text" name="" value="">
+            </label>
+             <label>Model
+             <input type="text" name="" value="" required>
+            </label>
+             <label>Registration Number/plate No:
+             <input type="text" name="" value="" required>
+            </label>
+             <label>Engine Number
+             <input type="number" name="" value="" required>
+            </label>
+             <label>Chassis Number
+             <input type="number" name="" value="" required>
+            </label><br><br>
+             <label for="year_issue">Year of issue  
+             <select name="year_issue" id="year_issue"> 
+                 <option value="2010">2010</option> 
+                 <option value="2014">2014</option> 
+                 <option value="2016">2016</option> 
+                 <option value="2018">2018</option> 
+                 <option value="2020">2020</option> 
+                 <option value="2022">2022</option>  
+             </select>
+            </label>
+             <label for="vehicle_type">Vehicle Type  
+             <select name="vehicle_type" id="vehicle_type"> 
+                 <option value="Toyota">Toyota</option> 
+                 <option value="Nissan">Nissan</option> 
+                 <option value="Mux">Mux</option> 
+                 <option value="Isuzu">Isuzu</option>   
+             </select>
+            </label>
+             <label for="vehicle_color">Vehicle Color 
+             <select name="vehicle_color" id="vehicle_color"> 
+                 <option value="Black">Black</option> 
+                 <option value="White">White</option> 
+                 <option value="Gray">Gray</option> 
+                 <option value="Silver">Silver</option>   
+             </select>
+            </label>
+             <label for="vehicle_condition">Vehicle Condition 
+             <select name="vehicle_condition" id="vehicle_condition">    
+                 <option value="New">New</option> 
+                 <option value="Used">Used</option>   
+             </select>
+            </label>&nbsp;&nbsp;&nbsp;
+             <label for="vehicle_status">Vehicle Status 
+             <select name="vehicle_status" id="vehicle_status"> 
+                 <option value="Active">Active</option> 
+                 <option value="Inactive">Inactive</option>   
+             </select>
+            </label>&nbsp;&nbsp;&nbsp;
+             <label for="vehicle_fuel">Vehicle Fuel  
+             <select name="vehicle_fuel" id="vehicle_fuel"> 
+                 <option value="diesel">diesel</option> 
+                 <option value="petrol">petrol</option>   
+             </select>
+            </label>&nbsp;&nbsp;&nbsp;
+         </fieldset>
+         <fieldset>
+             <legend>Control Buttons</legend>
+             <button style="height:30px;width:120px">Submit</button>
+             <button style="height:30px;width:120px">Clear Screen</button>
+         </fieldset>
+     </form>
+    </div>
+    <div id="tab2" class="tabcontent">
+       <form>
+         <fieldset>
+             <legend>Trip information</legend>
+             <label>Driver’s Name 
+             <input type="text" name="" value="">
+            </label>
+             <label>Trip start date
+             <input type="date" name="" value="" required>
+            </label>
+             <label>Trip End date
+             <input type="date" name="" value="" required>
+            </label>
+             <label>Starting location
+             <input type="text" name="" value="">
+            </label>
+             <label>Destination
+             <input type="text" name="" value="" required>
+            </label>
+             <label>Start millage
+             <input type="number" name="" value="" maxlength="8">
+            </label>
+             <label>End millage
+             <input type="number" name="" value="" maxlength="8">
+            </label>
+             <label>Total miles travelled
+             <input type="number" name="" value="" maxlength="8" hidden>
+             <label>Upload work ticket
+             <input type="file" name="work ticket" value="" placeholder="your work ticket is required">
+            </label><br><br>
+             <label>Trip purpose
+             <textarea></textarea>
+            </label>
+         </fieldset>
+         <fieldset>
+             <legend>Control Buttons</legend>
+             <button style="height:30px;width:150px">Submit Record</button>&nbsp;&nbsp;&nbsp;&nbsp;
+             <button style="height:30px;width:150px">Clerar Screen</button>
+         </fieldset>
+     </form>
+    </div>
+    <div id="tab3" class="tabcontent">
+       <h3>Serivices Information</h3>
+       <p>Serivices informations are required and attached supporting documnets</p>
+    </div>
+    <div id="tab4" class="tabcontent">
+      <h3>Reports</h3>
+      <p><a href="#">Services Report</a>&nbsp;&nbsp;&nbsp;<a href="#">Trip Details</a>&nbsp;&nbsp;&nbsp;<a href="#">Vehicle Details</a>&nbsp;&nbsp;&nbsp;</p>
+   </div>
+   <div id="tab5" class="tabcontent">
+    <h3>Logout</h3>
+  <p>Are you sure you want to logout <a href="index.html">Click Here</a></p>
+ </div>
+    <script>
+      function selectTab(tabIndex) {
+         // Declare all variables
+         var i, tabcontent;
+        
+         // Get all elements with class="tabcontent" and hide them
+         tabcontent = document.getElementsByClassName("tabcontent");
+         for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+         }
+         //Show the Selected Tab
+         document.getElementById(tabIndex).style.display = "block";
+         
+      }
+   </script>
+</body>
+</html>
